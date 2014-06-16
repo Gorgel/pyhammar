@@ -1,0 +1,56 @@
+{% extends "masonry_base.html" %}
+
+{% block content %}
+    <!-- kod för vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-20">
+                    <div class="masonryFeed">
+                        <div class="masonryInfo">
+                            <h2>Strömshammars bildgalleri!</h2>
+                            <b>Klicka på bilderna nedan för att förstora dem.</b>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-20">
+                    <div class="newsFeed">
+                        <div id="wrapper">
+                            <div id="list">  
+                                <div class="masonryItem">
+                                    <div class="masonryItem">
+                                    <a href="static/bilder/fullsize/himmel.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/himmel.jpg"></a>
+                                </div>
+                                    <a href="static/bilder/fullsize/road.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/road.jpg"></a>
+                                </div>
+                                
+                                
+                                <div class="masonryItem">
+                                    <a href="static/bilder/fullsize/boat.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/boat.jpg"></a>
+                                </div>
+                                
+                                <div class="masonryItem">
+                                    <a href="static/bilder/fullsize/stranden.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/stranden.jpg"></a>
+                                </div>
+                                
+                                
+                                <div class="masonryItem">
+                                    <a href="static/bilder/fullsize/kanot2.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/kanot2.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

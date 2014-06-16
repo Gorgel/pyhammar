@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- kod för vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <div class="newsFeed">
+                        <div class="newsItem">
+                            <h2>Fiskekommittén</h2>
+                            <p>På denna sida kan man finna info om Fiskekommitténs aktiviteter.
+                            Vid Strömshammars vägförenings årsmöte 2010 beslutades att fiskekortet skall ingå i medlemsavgiften.
+                            Man skall medföra fiskekort vid fiske i våra sjöar. Ladda ned kortet från högerspalten. Fyll i tomtnummer,
+                            sedan är det bara att hoppas på god fiskelycka!</p>
+                            <p>Fiskekommittén består av:</p>
+                            <ul>
+                                <li><p><a href='kontakt#AllanJohansson'>Allan Johansson</a></p></li>
+                                <li><p><a href='kontakt#fiskeJoakimBjörklund'>Joakim Björklund</a></p></li>
+                                <li><p><a href='kontakt#KennethModig'>Kenneth Modig</a></p></li>
+                            </ul>
+                        </div>
+
+                        <div class="newsItem">
+                            <h2>Fisketävlingen i Henaren 26/5-12</h2>
+                            <p>Vi var 8st båtar som fiskade och vi fick sammanlagt 22st gäddor.<p>
+                                <ul>
+                                    <li><p>1a platsen gick till Jonas Crona tomt 83 + Leffe Nordström tomt 32 på 6st gäddor</p></li>
+                                    <li><p>2a platsen gick till Allan och Tim tomt 110 på 5st gäddor</p></li>
+                                    <li><p>3a Dennis med familj tomt 41 på 3st gäddor </p></li>
+                                </ul>
+                            <p>Största gäddan fick Dennis båt den var på 4,6kg</p>
+                            <p><b>Tack till Kenneth Modig som hjälpte till att arrangera fisketävlingen.</b></p>
+                            <div class="masonryItem">
+                                    <a href="static/bilder/fisket%C3%A4vling2012.jpg" data-lightbox="masonryImage" data-title="Lagindelningskarta"><img class="masonryImage" src="static/bilder/fisket%C3%A4vling2012.jpg"></a>
+                                </div>
+                        </div>
+                        
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                        {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <div class="sideBarItem">
+                            <h2>Fiskekort:</h2>
+                            <p><a href="static/dokument/fiskekort2011.pdf">fiskekort2011.pdf</a></p>
+                            </div>
+
+                            <div class="sideBarItem">
+                            <h2>Pimpeltävling:</h2>
+                            <p><a href="static/dokument/Pimpel2013.pdf">pimpel2013.pdf</a></p>
+                            </div>
+
+                            <div class="sideBarItem">
+                            <h2>Gäddfestivalen 2010 Bilder & Resultat:</h2>
+                            <p><a href="static/dokument/gäddfestival.pdf">gäddfestival.pdf</a></p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

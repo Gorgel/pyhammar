@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <!-- kod för vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <div class="newsFeed">
+                        <div class="newsItem">
+                            <h2>Vattengruppen</h2>
+                            <p>Vattengruppen ansvarar för drift och underhåll av våra två pumphus och tillhörande distributionsnät. Som alla nog vet finns det vissa regler hur vi använder vårt vatten, allrahelst under semesterperioden. Under denna tid måste samtliga vara mycket restriktiva hur vi förbrukar vatten. Det är av största vikt att regler för vattenhushållning efterlevs, bevattningsförbud råder generellt under denna period. Vattnets kvalitét kontrolleras enligt gällande direktiv. </p>
+                            <p>Vattengruppen består av:</p>
+                            <ul>
+                                <li><p><a href="kontakt#DanBjörklund">Dan björklund</a></p></li>
+                                <li><p><a href="kontakt#KentJohansson">Kent Johansson</a></p></li>
+                                <li><p><a href="kontakt#JanMaartenDijkgraf">Jan Maarten Dijkgraf</a></p></li>
+                                <li><p><a href="kontakt#LeifNordström">Leif Nordström</a></p></li>
+                                <li><p><a href="kontakt#TorbjörnLarsson">Torbjörn Larsson</a></p></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="newsItem">
+                            <h2>Testprotokoll</h2>
+                            <table>
+                                <tr>
+                                    <td>Årtal:</td>
+                                    <td>Nya pumphuset</td>
+                                    <td>Gamla pumphuset</td>
+                                </tr>
+                                <tr>
+                                    <td>2005</td>
+                                    <td><a href='static/dokument/pumprummen/2005_protokoll_nya.pdf'>pdf</a></td>
+                                    <td><a href='static/dokument/pumprummen/2005_protokoll_gamla.pdf'>pdf</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--
+                        <div class="newsItem">
+                            <h2>Vattenbulletin</h2>
+                            <p>Vi har under året haft betydliga problem med vårat vattennät. Det har varit läckor till följd av
+                            den kraftiga tjällossningen, tomtägare som glömt stänga av sitt vatten, gammal och sliten utrustning mm.</p>
+
+                            <p>Styrelsen har beslutat att i efterhand som skador uppträder ska vårt vattennät gradvis bytas ut. Vi lagar inte
+                            bara utan byter allteftersom till nyare och mer driftsäker utrustning. Det kan gälla ledningar, kopplingar, pumpar
+                            , doseringsutrustning mm, allt som har med vårt vattennät att göra.</p>
+
+                            <p>Styrelsen vill tipsa tomtägarna om att se till att, under den här renoveringstiden (som vi just nu inte vet hur
+                             lång den kan bli), alltid ha en beredskap för att vi avav och till kan bli av med vattnet under kortare eller längre tid.
+                             Därför, spola upp en hink, dunk eller kanna så att du alltid har lite vatten. </p>
+
+                            <b>Observera att det heller inte är tillåtet att använda spridare för att vattna gräsmattan. Så klart kan du vattna extra
+                             känsliga växter och det som är nyplanterat, men låt bli att vattna annat.</b>
+
+                             <b>När du som fritidshusägare åker hem efter semestern, helgen eller dylikt - kolla alltid extra nog att du stängt av
+                             huvudkranen och att det inte står och läcker vatten någonstans på tomten. Du blir själ ersättningsskyldig för
+                             åtgärden om felet ligger på din tomt.</b>
+                             <br>
+                             <p>Vänligen!</p>
+                             <p>Strömshammar i september 2006</p>
+                             <p>Styrelsen</p>
+
+                        </div>
+                        -->
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                        {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <div class="sideBarItem">
+                        <h2>Felanmälan:</h2>
+                        <p>Felanmälan på vattennätet görs till vattengruppen.  <br><br>
+                            Telefon : 070 520 02 66</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

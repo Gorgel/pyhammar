@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- kod för vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <div class="newsFeed">
+                        <div class="newsItem">
+                            <h2>Strömshammars styrelse</h2>
+                            <table>
+                                <tr>
+                                    <td>Namn:</td>
+                                    <td>Position:</td>
+                                    <td>Tomt nr:</td>
+                                    <td>Telefon:</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="kontakt#UlfCarling">Ulf Carling</a></td>
+                                    <td>Ordförande</td>
+                                    <td>37</td>
+                                    <td>0157 222 21 / 070 535 84 76</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="kontakt#AnnAnnelind">Ann Annelind</a></td>
+                                    <td>Sekreterare</td>
+                                    <td>70</td>
+                                    <td>0157 224 80</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="kontakt#styrelsenDanBjörklund">Dan Björklund</a></td>
+                                    <td>Ledamot vatten</td>
+                                    <td>38</td>
+                                    <td>070 520 02 66</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="kontakt#styrelsenIngvarLarsson">Ingvar Larsson</a></td>
+                                    <td>Ledamot väg & grönt</td>
+                                    <td>19</td>
+                                    <td>08 99 01 19 / 070 593 32 61</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="kontakt#HelenSwärdh">Helen Swärdh</a></td>
+                                    <td>Kassör</td>
+                                    <td>32</td>
+                                    <td>08 530 382 54 / 073 332 08 70 </td>
+                                </tr>
+                            </table>
+                            <br>
+                        </div>
+                        
+                        <div class="newsItem">
+                            <h2>Årsmöten</h2>
+                            <table>
+                                <tr>
+                                    <td>Årtal:</td>
+                                    <td>Protokoll:</td>
+                                </tr>
+                                <tr>
+                                    <td>2013</td>
+                                    <td><a href='static/dokument/protokoll/protokoll2013.pdf'>protokoll2013.pdf</a></td>
+                                </tr>
+                                 <tr>
+                                    <td>2012</td>
+                                    <td><a href='static/dokument/protokoll/protokoll2012.pdf'>protokoll2012.pdf</a></td>
+                                </tr>
+                                 <tr>
+                                    <td>2011</td>
+                                    <td><a href='static/dokument/protokoll/protokoll2011.pdf'>protokoll2011.pdf</a></td>
+                                </tr>
+                                 <tr>
+                                    <td>2010</td>
+                                    <td><a href='static/dokument/protokoll/protokoll2010.pdf'>protokoll2010.pdf</a></td>
+                                </tr>
+                                
+                            </table>
+                            <br>
+                            
+                        </div>
+                        
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                        {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <div class="sideBarItem">
+                        <h2>Maila styrelsen:</h2>
+                        <p>styrelsen@stromshammar.se</p>
+                        </div>
+
+                        <div class="sideBarItem">
+                        <h2>Anmälan av ägarbyte</h2>
+                        <p>Vid ägarbyte, anmäl till styrelsen via:</p>
+                            styrelsen@stromshammar.se
+                        </div>
+
+                        <div class="sideBarItem">
+                        <h2>Årsavgiften</h2>
+                        </div>
+
+                        <div class="sideBarItem">
+                        <h2>Marielunds vägförening</h2>
+                        <p>Ordförande Lars Sjöberg - 070 521 15 47 </p>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

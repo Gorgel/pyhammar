@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <!-- kod för vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <div class="newsFeed">
+                        <div class="newsItem">
+                            <h2>Arbetsledare</h2>
+                            <table>
+                                <tr>
+                                    <td>Arbetslag nr:</td>
+                                    <td>Namn:</td>
+                                    <td>Tomt nr:</td>
+                                    <td>Telefon:</td>
+                                </tr>
+                                <tr>
+                                    <td>1.</td>
+                                    <td><a href='kontakt#OlaClaesson'>Ola Claesson</a></td>
+                                    <td>104</td>
+                                    <td>08 99 26 74 / 0157 223 10</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td><a href='kontakt#LarsLindesten'>Lars Lindesten</a></td>
+                                    <td>5</td>
+                                    <td>070 350 60 18</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td><a href='kontakt#LarsSjöberg'>Lars Sjöberg</a></td>
+                                    <td>45</td>
+                                    <td>070 521 16 47</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td><a href='kontakt#KurtDanielsson'>Kurt Danielsson</a></td>
+                                    <td>82</td>
+                                    <td>08 37 17 36</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td><a href='kontakt#JoakimBjörklund'>Joakim Björklund</a></td>
+                                    <td>61</td>
+                                    <td>08 774 35 79</td>
+                                </tr>
+                            </table>
+                            <p>Verksamhetsåret räknas från halvårsskiftet, 1 juli-30 juni. Under verksamhetsåret är det två arbetsdagar.
+                            Det är obligatoriskt att medverka vid ett av tillfällena höst eller vår. Om man med ålderns rätt eller av annan
+                             anledning ej kan arbeta med fysiskt krävande arbete, kontakta din arbetsledare för annat lättare arbete,
+                             senast en vecka innan angivet datum. Om man ej är medverkande vid någon av de två arbetsdagarna debiteras
+                              ett extra medlemsuttag f.n om 1000 kr, betalas i samband med ordinarie årsavgift.</p>
+                        </div>
+                        
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                        {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <div class="sideBarItem">
+                            <h2>Lagindelsningkarta</h2>
+                            <p>Klicka för att förstora bild.</p>
+                            <div class="masonryItem">
+                                    <a href="static/bilder/arbetslagsKarta.png" data-lightbox="masonryImage" data-title="Lagindelningskarta"><img class="masonryImage" src="static/bilder/arbetslagsKarta.png"></a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

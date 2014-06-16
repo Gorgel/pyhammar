@@ -1,0 +1,51 @@
+html, body {
+height:100%;
+background-color: #EEEEEE;
+}
+
+.col-centered{
+float:left;
+margin-top: 20px;
+float: none;
+overflow: auto;
+}
+
+/* stadgar styling */
+
+table {
+margin: 10px;
+padding:20px;
+}
+
+table tr td {
+padding:10px;
+}
+
+#container {
+height:auto;
+overflow: auto;
+}
+
+
+#linkContainer {
+    position: relative;
+    top:-28px;
+    text-align: center;
+}
+
+#linkContainer a {
+    color: white;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+#linkContainer .glyphicon {
+    color:white;
+    font-size: 1.2em;
+}
+
+.license {
+font-size: 0.8em;
+padding: 10px;
+text-align: center;
+}

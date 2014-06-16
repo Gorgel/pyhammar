@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- kod höger och vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <!-- vänsterspalten med nyheter -->
+                    <div class="newsFeed">
+                        <!-- nyhetsartikel -->
+                        <div class="newsItem">
+                            <p>Licensed under the <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</a></p>
+
+                            <p>Author: <a href="lokeshdhakar.com">Lokesh Dhakar</a></p>
+
+                            <a href="http://lokeshdhakar.com/projects/lightbox2/">Lightbox</a>
+                            <br>
+                            <br>
+                            <a href="https://github.com/lokesh/lightbox2/">Lightbox on github</a>
+                            <br>
+                            <br>
+                            <a href="/">Back to Strömshammar</a>
+                        </div>
+                        <!-- nyhetsartikel slut -->
+                        
+                        
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                        {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <!-- sidoartikel -->
+                        <div class="sideBarItem">
+                            <h2>Tillbaka till startsidan:</h2>
+                            <!-- nedan länkas det till "artiklarnas ankare" -->
+                            <a href="/">Startsidan</a>
+                        </div>
+                        <!-- sidoartikel slut -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- kod höger och vänsterspalt slut-->
+{% endblock %}
+
+
+    

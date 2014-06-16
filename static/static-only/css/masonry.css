@@ -1,0 +1,73 @@
+#list
+{
+    width: 100%;
+    overflow: hidden;
+
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1.875em; /* 30px */
+    -webkit-column-fill: auto;
+    -moz-column-count: 3;
+    -moz-column-gap: 1.875em; /* 30px */
+    -moz-column-fill: auto;
+    column-count: 3;
+    column-gap: 1.875em; /* 30px */
+    column-fill: auto;
+}
+
+.masonryImage {
+width:99%;
+box-shadow: 2px 2px 2px #888888;
+margin-bottom: 30px;
+}
+ 
+@media only screen and ( max-width: 40em ) /* 640px */
+{
+    #list
+    {
+     -webkit-column-count: 2;
+        -webkit-column-gap: 0.938em; /* 15px */
+        -moz-column-count: 2;
+        -moz-column-gap: 0.938em; /* 15px */
+        column-count: 2;
+        column-gap: 0.938em; /* 15px */
+    }
+}
+@media only screen and ( max-width: 20em ) /* 320px */
+{
+    #list
+    {
+        -webkit-column-count: auto;
+        -moz-column-count: auto;
+        column-count: auto;
+    }
+}
+
+.masonryFeed {
+margin-top: 50px;
+border-radius: 5px;
+box-shadow: 2px 2px 2px #888888;
+padding:30px;
+background: white;
+margin-bottom: 2px;
+
+}
+
+.masonryInfo {
+}
+
+.masonryFeed h2 {
+margin:0px;
+margin-bottom: 5px;
+font-family: 'Nothing+You+Could+Do';
+font-size: 3em;
+}
+
+.masonryFeed p {
+color:black;
+}
+
+#dandelion {
+    padding: 20px;
+    float: left;
+    max-height: auto;
+}

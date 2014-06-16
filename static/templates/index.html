@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- kod höger och vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <!-- vänsterspalten med nyheter -->
+                    <div class="newsFeed">
+                        <!-- nyhetsartikel -->
+                        <div class="newsItem">
+                                <h2>Premiär för nya Strömshammar-sidan!</h2>
+                            
+                                <!-- nedanför finns ett ankare att länka till om man vill skapa en länk till
+                                till "senaste nytt" i högerfältet -->
+                                <a name="newsItem3"></a>
+                                <!-- nedan lägger du in datumet för artikeln -->
+                                <p id="newsDate">-onsdagen den 21 november 2013</p>
+                                <p>Bla bla bla trevligt, jordgubbar och glass. </p>
+                        </div>
+                        <!-- nyhetsartikel slut -->
+                        
+                        <!-- nyhetsartikel -->
+                        <div class="newsItem">
+                            <h2>Stor vindkraftspark planeras i dunker.</h2>
+                            <!-- nedanför finns ett ankare att länka till om man vill skapa en länk till
+                            till "senaste nytt" i högerfältet -->
+                            <a name="newsItem1"></a>
+                            <!-- nedan lägger du in datumet för artikeln -->
+                            <p id="newsDate">-onsdagen den 20 november 2013</p>
+                            <p>För information kontakta dunkers-och-gryts-vael@hotmail.se
+                            <br><br>
+                            Med vänlig hälsning Styrelsen i Strömshammar.
+                            </p>
+                        </div>
+                        <!-- nyhetsartikel slut -->
+                        
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                        {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <!-- sidoartikel -->
+                        <div class="sideBarItem">
+                            <h2>Senaste nytt:</h2>
+                            <!-- nedan länkas det till "artiklarnas ankare" -->
+                            <ul>
+                            <li><p><a href="#newsItem3">Tack till alla som deltog under arbetshelgen!</a></p></li>
+                            <li><p><a href="#newsItem2">Vad händer i strömshammar?</a></p></li>
+                            <li><p><a href="#newsItem1">Stor vindkraftspark planeras i dunker.</a></p></li>
+                            </ul>
+                        </div>
+                        <!-- sidoartikel slut -->
+                        
+                        <!-- sidoartikel -->
+                        <div class="sideBarItem">
+                            <h2>Felanmälan:</h2>
+                            <p>Felanmälan på vattennätet görs till vattengruppen.  <br><br>
+                            <b>Telefon : 073-829 62 75</b></p>
+                        </div>
+                        
+                        <!-- sidoartikel -->
+                        <div class="sideBarItem">
+                            <h2>Gästboken.</h2>
+                            <p>Skriv gärna nått i <a href="http://www.gastbok.nu/gb/42045/">gästboken!</a></p>
+                        </div>
+                        <!-- sidoartikel slut -->
+                        
+                        <!-- sidoartikel -->
+                        <div class="sideBarItem">
+                            <h2>Välkommen till Strömshammar!</h2>
+                            <p>Hjärtligt välkommen  till vårt fina område! För allas trevnad ber vi boende och besökare att
+                                respektera hastighetsbegränsningen som ligger på 30 Km/h.</p>
+                        </div>
+                        <!-- sidoartikel slut-->
+                        
+                        <!-- sidoartikel -->
+                        <div class="sideBarItem">
+                            <h2>Välkomstbrev.</h2>
+                            <p>Är du ny i området? Ladda ned välkomstsbrevet nedan:</p>
+                            <p><a href="static/dokument/välkommen.pdf">Välkomstbrev</a></p>
+                        </div>
+                        <!-- sidoartikel slut-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- kod höger och vänsterspalt slut-->
+{% endblock %}

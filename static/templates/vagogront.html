@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- kod för vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <div class="newsFeed">
+                        <div class="newsItem">
+                            <a name="vogItem3"></a>
+                            <h2>Väg och grönområden</h2>
+                            <p>Väg och grönområdesansvarig ansvarar för drift-underhåll av vårt vägnät och våra grönområden.</p>
+                            <b>Tänk på att barn och gamla kan vara nyckfulla! Håll på hastigheten.</b>
+                            <p>Väg och Grönområdesansvarig:</p>
+                            <ul>
+                                <li><p><a href='kontakt#IngvarLarsson'>Ingvar Larsson</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="newsItem">
+                            <a name="vogItem2"></a>
+                            <h2>Regler för avverkning utanför tomter</h2>
+                            <p>Tomtägare som önskar avverka träd på vägföreningens mark utanför den egna tomten, även ringbarka
+                            , använd ecoplugg eller rensa tätt växande sly som kan skydda mot insikt, skall iaktta följande regler.</p>
+                            <ol>
+                                <li>Det skall finnas en skriftlig plan över vad man vill göra, med bifogad skiss/karta.</li>
+                                <li>Träd och sly som man vill ta bort ska märkas ut med band.</li>
+                                <li>Samtliga närboende ska delges planen och samtycka med signatur.</li>
+                                <li>Planen överlämnas till styrelsen som efter inspektion meddelar beslut.</li>
+                            </ol>
+                            <p>Anledningen till denna påpekan är att det tydligen råder oklarheter beträffande de befogenheter
+                            man har som enskild tomtägare.</p>
+                            <p>Att styrelsen ser allvarligt på problemet är för att undvika framtida konflikter mellan grannar och att
+                            förändringar i området måste ske utifrån de boendes gemensamma intressen.</p>
+                            <p>Tomtägare som inte respekterar dessa regler gör sig skyldiga till egenmäktigt förfarande och kan
+                            juridiskt ställas till svars för detta.</p>
+                            <b>Undantaget är att hålla snyggt i omedelbar närhet (10 - 20 m) till den egna tomten på ett
+                            sådant sätt att ingen kan reagera annat än positivt. Här får rensas sly och mindre träd
+                            (3 - 4 m). För detta behövs inga tillstånd utan ska i stället uppmuntras.</b><br><br>
+                        </div>
+
+                        <div class="newsItem">
+                            <a name="vogItem1"></a>
+                            <h2>Tömning av septitank</h2>
+                            <p>Ni som har septitankar och som skall tömmas, försök att samordna dessa tömningar. Med tanke på väglag
+                            mm vintertid måste vi ibland ploga och sanda extra så tankbilen kommer fram. I nio fall av tio ringer man in
+                            beställning om tömning till Sörmlandsvatten dagen innan d.v.s fredagen. Med lite framförhållning med
+                            beställning kan Åsa Bäckström på Sörmlandsvatten samordna det hela bättre och vi kan hålla kostnaderna
+                            nere för det extra vinterunderhåll som blir aktuellt.</p>
+
+                        </div>
+                        
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                        {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <div class="sideBarItem">
+                            <h2>Snabblänkar</h2>
+                            <p><a href="#vogItem3">Väg och grönområden.</a></p>
+                            <p><a href="#vogItem2">Regler för avverkning utanför tomter</a></p>
+                            <p><a href="#vogItem1">Tömning av septitank.</a></p>
+                        </div>
+                        
+                        <div class="sideBarItem">
+                            <h2>Regler för avverkning utanför tomter</h2>
+                            <p><a href="static/dokument/Regler-avverkning.pdf">Regler-avverkning.pdf</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

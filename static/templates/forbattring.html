@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- kod höger och vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <!-- vänsterspalten med nyheter -->
+                    <div class="newsFeed">
+                        <!-- nyhetsartikel -->
+                        <div class="newsItem">
+                                <h2>Förbättringsförslag</h2>
+                            <br>
+                                <p>Om du har synpunkter, ideér eller förslag på vad som kan förbättras
+                                    på Strömshammars hemsida kan du skicka ett mail till förslagslådan@stromshammar.se
+                                </p>
+                                <p>Mvh Jenny, Martin och Simon</p>
+                        </div>
+                        <!-- nyhetsartikel slut -->
+                        
+                        
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                        {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <!-- sidoartikel -->
+                        <div class="sideBarItem">
+                            <h2>Tillbaka till startsidan:</h2>
+                            <!-- nedan länkas det till "artiklarnas ankare" -->
+                            <a href="index.html">Startsidan</a>
+                        </div>
+                        <!-- sidoartikel slut -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- kod höger och vänsterspalt slut-->
+{% endblock %}

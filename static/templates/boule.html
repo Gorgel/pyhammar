@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!-- kod för vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <div class="newsFeed">
+                        <div class="newsItem">
+                            <h2>Boule i strömshammar</h2>
+                            <p>Strömshammar har en egen boulebana och är är belägen invid Henaren, strax ovan festplatsen. </p>
+                            
+                            <div id="wrapper">
+                            <div id="list">  
+                                <div class="masonryItem">
+                                  <div class="masonryItem">
+                                    <a href="static/bilder/boule/boule1.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/boule/boule1.jpg"></a>
+                                </div>
+                                    <div class="masonryItem">
+                                    <a href="static/bilder/boule/boule3.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/boule/boule3.jpg"></a>
+                                </div>
+                                    <div class="masonryItem">
+                                    <a href="static/bilder/boule/boule4.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/boule/boule4.jpg"></a>
+                                </div>
+                                    <div class="masonryItem">
+                                    <a href="static/bilder/boule/boule5.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/boule/boule5.jpg"></a>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                        {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <div class="sideBarItem">
+                            <h2>Karta</h2>
+                            <div class="masonryItem">
+                                    <a href="static/bilder/boulekarta.png" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/boulekarta.png"></a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

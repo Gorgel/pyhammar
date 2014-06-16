@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Strömshammar</title>
+
+    <!-- laddar core botstrap css -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- laddar css -->
+    <link href="static/css/body.css" rel="stylesheet" type="text/css">
+    <link href="static/css/menu.css" rel="stylesheet" type="text/css">
+    <link href="static/css/slider.css" rel="stylesheet" type="text/css">
+    <link href="static/css/newsFeed.css" rel="stylesheet" type="text/css">
+    <link href="static/css/sideBar.css" rel="stylesheet" type="text/css">
+    <link href="static/js/lightbox/css/lightbox.css" rel="stylesheet" type="text/css">
+    <link href="static/css/masonry.css" rel="stylesheet" type="text/css">
+    
+    <!-- laddar fonter -->
+    <link href='http://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+    
+</head>
+
+<body>
+
+<!-- kod för navbar --><!--navbar-fixed-top , lägg till för fix meny-->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!-- loggan uppe i vänstra hörnet -->
+                <a class="navbar-brand" href="/">Strömshammar</a>
+            </div>
+            
+            <!-- menybitar -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/"><span class="glyphicon glyphicon-home"></span>Startsidan</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-info-sign"></span>Föreningsinformation<b class="caret"></b></a><!-- meny-knapp -->
+                        <ul class="dropdown-menu">
+                            <li><a href="stadgar">Stadgar</a><!-- undermeny-knapp -->
+                            </li>
+                            <li><a href="styrelsen">Styrelsen</a><!-- undermeny-knapp -->
+                            </li>
+                            <li><a href="vattengruppen">Vattengruppen</a><!-- undermeny-knapp -->
+                            </li>
+                            <li><a href="vagogront">Väg och grönt</a><!-- undermeny-knapp -->
+                            </li>
+                            <li><a href="lagindelning">Lagindelning</a><!-- undermeny-knapp -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-leaf"></span>Fritidsaktiviteter<b class="caret"></b></a><!-- meny-knapp -->
+                        <ul class="dropdown-menu">
+                            <li><a href="fiske">Fiske</a><!-- undermeny-knapp -->
+                            </li>
+                            <li><a href="golf">Golf</a><!-- undermeny-knapp -->
+                            </li>
+                            <li><a href="boule">Boule</a><!-- undermeny-knapp -->
+                            </li>
+                            <li><a href="fest">Fest</a><!-- undermeny-knapp -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="kontakt"><span class="glyphicon glyphicon-user"></span>Kontakt</a><!-- meny-knapp -->
+                    </li>
+                    <li><a href="historia"><span class="glyphicon glyphicon-time"></span>Historia</a><!-- meny-knapp -->
+                    </li>
+                    <li><a href="fragorosvar"><span class="glyphicon glyphicon-question-sign"></span>Frågor & Svar</a><!-- meny-knapp -->
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    {% block content %}
+    {% endblock %}
+
+
+<!-- JavaScript -->
+    
+    <script language="JavaScript" type="text/javascript" src="static/js/jquery-1.10.2.js"></script>
+    <script language="JavaScript" type="text/javascript" src="static/js/jquery.masonry.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="static/js/bootstrap.js"></script>
+    <script language="JavaScript" type="text/javascript" src="static/js/lightbox/js/jquery-1.11.0.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="static/js/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //ändrar hastighet på bildspelet
+    })
+    </script>
+    
+</body>
+
+</html>

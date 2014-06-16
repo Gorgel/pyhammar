@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- kod för vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col-centered">
+                <div class="col-xs-12 col-md-8">
+                    <div class="newsFeed">
+                        <div class="newsItem">
+                            <h2>Festkommite.</h2>
+                            <p>Festkommiten består av 3 ledarmöter som tillsammans med styrelsen sammråder  i de olika festligheter som
+                            föreningen är inblandad i, såsom Midsommarfesten. Festkommiten består av 3 ledarmöter som tillsammans med
+                            styrelsen sammråder  i de olika festligheter som föreningen är inblandad i, såsom Midsommarfesten.
+                            Festkommiten mottager med stort intresse olika förslag till festligheter från föreningens medlämmar.
+                            Årets ledarmöter är valda på ett år av årsmötet som vid varje årsstämma utser ledarmöter.</p>
+                            <p>Ledarmöter:</p>
+                            <ul>
+                                <li><a href='kontakt#NinaBjörklund'>Nina Björklund</a></li>
+                                <li><a href='kontakt#GunnarJägerberg'>Gunnar Jägerberg</a></li>
+                                <li><a href='kontakt#KickiGahre'>Kicki Gahre</a></li>
+                                <li><a href='kontakt#LottaStrömberg'>Lotta Strömberg</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- footer-elementet längst ner i vänsterspalten -->
+                            {% include "footer.html" %}
+                        <!-- slut footer-elementet längst ner i vänsterspalten -->
+                        
+                    </div>
+                </div>
+                
+                <!-- kod för högerspalt -->
+                <div class="col-xs-12 col-md-4">
+                    <div class="sideBar">
+                        <div class="sideBarItem">
+                            <h2>Festgrunkor:</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
