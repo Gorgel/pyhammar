@@ -9,3 +9,12 @@ class WallPost(models.Model):
 
     def __unicode__(self):
         return smart_unicode(self.namn)
+
+class NewsPost(models.Model):
+    headline = models.CharField(max_length=120, null=False, blank=False)
+    date = models.DateTimeField(auto_now_add=True, auto_now=True)
+    body_text = models.TextField(max_length=1024, null=False, blank=False)
+    id = models.AutoField(primary_key=True)
+
+    def __unicode__(self):
+        return smart_unicode(self.headline)

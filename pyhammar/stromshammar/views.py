@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response, RequestContext, HttpResponseRedirect
 from django.contrib import messages
 from .forms import CaptchaWallForm
-from models import WallPost
+from models import WallPost, NewsPost
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
@@ -16,7 +16,9 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def index(request):
 
-    context_dict = {}
+    news_posts = NewsPost.objects.all().order_by('-date')
+
+    context_dict = {'news_posts' : news_posts}
 
     return render_to_response("index.html", context_dict, context_instance = RequestContext(request))
 

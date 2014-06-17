@@ -10,38 +10,23 @@
                     <!-- vänsterspalten med nyheter -->
                     <div class="newsFeed">
                         <!-- nyhetsartikel -->
-                        <div class="newsItem">
-                                <h2>Premiär för nya Strömshammar-sidan!</h2>
-                            
-                                <!-- nedanför finns ett ankare att länka till om man vill skapa en länk till
-                                till "senaste nytt" i högerfältet -->
-                                <a name="newsItem3"></a>
-                                <!-- nedan lägger du in datumet för artikeln -->
-                                <p id="newsDate">-onsdagen den 21 november 2013</p>
-                                <p>Bla bla bla trevligt, jordgubbar och glass. </p>
-                        </div>
-                        <!-- nyhetsartikel slut -->
-                        
-                        <!-- nyhetsartikel -->
-                        <div class="newsItem">
-                            <h2>Stor vindkraftspark planeras i dunker.</h2>
-                            <!-- nedanför finns ett ankare att länka till om man vill skapa en länk till
-                            till "senaste nytt" i högerfältet -->
-                            <a name="newsItem1"></a>
-                            <!-- nedan lägger du in datumet för artikeln -->
-                            <p id="newsDate">-onsdagen den 20 november 2013</p>
-                            <p>För information kontakta dunkers-och-gryts-vael@hotmail.se
-                            <br><br>
-                            Med vänlig hälsning Styrelsen i Strömshammar.
-                            </p>
-                        </div>
-                        <!-- nyhetsartikel slut -->
+                        {% if news_posts %}
+                            {% for post in news_posts %}
+
+                            <div class="newsItem">
+                            <h2>{{ post.headline }}</h2>
+                            <a name="item{{ post.id }}"></a>
+                            <p id="newsDate">senast uppdaterad: {{ post.date }}</p>
+                            {{ post.body_text|safe }}
+                            </div>
+                            {% endfor %}
+                        {% endif %}
                         
                         <!-- footer-elementet längst ner i vänsterspalten -->
                         {% include "footer.html" %}
                         <!-- slut footer-elementet längst ner i vänsterspalten -->
                         
-                    </div>
+                    </div> 
                 </div>
                 
                 <!-- kod för högerspalt -->
@@ -52,9 +37,11 @@
                             <h2>Senaste nytt:</h2>
                             <!-- nedan länkas det till "artiklarnas ankare" -->
                             <ul>
-                            <li><p><a href="#newsItem3">Tack till alla som deltog under arbetshelgen!</a></p></li>
-                            <li><p><a href="#newsItem2">Vad händer i strömshammar?</a></p></li>
-                            <li><p><a href="#newsItem1">Stor vindkraftspark planeras i dunker.</a></p></li>
+                                {% if news_posts %}
+                                    {% for post in news_posts %}
+                                        <li><p><a href="#item{{ post.id }}">{{ post.headline }}</a></p></li>
+                                   {% endfor %}
+                                {% endif %}
                             </ul>
                         </div>
                         <!-- sidoartikel slut -->
@@ -67,10 +54,10 @@
                         </div>
                         
                         <!-- sidoartikel -->
-                        <div class="sideBarItem">
+                       <!-- <div class="sideBarItem">
                             <h2>Gästboken.</h2>
                             <p>Skriv gärna nått i <a href="http://www.gastbok.nu/gb/42045/">gästboken!</a></p>
-                        </div>
+                        </div> -->
                         <!-- sidoartikel slut -->
                         
                         <!-- sidoartikel -->
@@ -83,7 +70,7 @@
                         
                         <!-- sidoartikel -->
                         <div class="sideBarItem">
-                            <h2>Välkomstbrev.</h2>
+                            <h2>Välkomstbrev</h2>
                             <p>Är du ny i området? Ladda ned välkomstsbrevet nedan:</p>
                             <p><a href="static/dokument/välkommen.pdf">Välkomstbrev</a></p>
                         </div>
