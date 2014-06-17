@@ -60,10 +60,56 @@ padding: 2px 12px;
 text-decoration: none;
 }
 
-/*
-.newsItem img {
-padding: 20px;
-width: 100%;
+.submitItem {
+
+border-bottom-width: 1px;
+border-bottom-color: gray;
+margin-bottom:30px;
+padding-bottom:20px;
+overflow: auto;
 }
 
-*/
+.submitItem h2 {
+margin:0px;
+margin-bottom:20px;
+font-size: 2em;
+}
+
+.pageNav {
+    width:100%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.pageNav ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+
+}
+
+.pageNav ul li {
+display: inline;
+    padding: 0px 8px 0px 8px;
+}
+
+.pageNav ul li a {
+text-decoration: none;
+}
+
+#id_meddelande {
+    height: 200px;
+    width: 100%;
+}
+
+.pageNav {
+padding:10px;
+}
+
+.captcha {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
