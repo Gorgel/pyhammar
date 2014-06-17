@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- kod höger och vänsterspalt -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="col-xs-12 col-md-8 right">
+                    <!-- vänsterspalten med nyheter -->
+                     <div class="newsFeed">
+                         <div class="newsItem">
+                             
+                         <div class="pageNav">
+                             <ul>
+                                 {% if wall_posts.has_previous %}
+                                    <li><a href="?page={{ wall_posts.previous_page_number }}">Föregående</a></li>
+                                {% endif %}
+                                 
+                                
+                                 
+                                 <li>Sida {{ wall_posts.number }} av {{ wall_posts.paginator.num_pages }}</li>
+
+                                 {% if wall_posts.has_next %}
+                                    <li><a href="?page={{ wall_posts.next_page_number }}">Nästa</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                         
+                         
+                         
+                        {% if wall_posts %}
+                            {% for post in wall_posts %}
+
+                            <div class="newsItem">
+                            <h2>{{ post.namn }}</h2>
+                            <p id="newsDate">{{ post.timestamp }}</p>
+                            <p>{{ post.meddelande }}</p>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                         
+                         <div class="pageNav">
+                             <ul>
+                                 {% if wall_posts.has_previous %}
+                                    <li><a href="?page={{ wall_posts.previous_page_number }}">Föregående</a></li>
+                                {% endif %}
+                                 
+                                
+                                 
+                                 <li>Sida {{ wall_posts.number }} av {{ wall_posts.paginator.num_pages }}</li>
+
+                                 {% if wall_posts.has_next %}
+                                    <li><a href="?page={{ wall_posts.next_page_number }}">Nästa</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                             
+                             {% include "footer.html" %}
+                    </div>
+                </div>
+            </div>
+                    <div class="col-xs-12 col-md-4">
+                            <div class="sideBar">
+                                <div class="sideBarItem">
+                                    <div class="submitItem">
+                                        <h2>Skriv ett inlägg nedan:</h2>
+                                        <form method="POST" action="">
+
+                                        {% csrf_token %}
+
+                                        {{ form.as_p }}
+                                        <p>Skriv in symbolerna från bilden i textrutan bredvid och tryck sedan på skicka. Detta är nödvändigt för att
+                                            skydda sidan mot spam.</p>
+                                        <button type="submit" name="submitButton">Skicka</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- kod höger och vänsterspalt slut-->
+{% endblock %}

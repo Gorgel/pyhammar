@@ -1,15 +1,34 @@
-from django.shortcuts import render, render_to_response, RequestContext
-
+from django.shortcuts import render, render_to_response, RequestContext, HttpResponseRedirect
+from django.contrib import messages
+from .forms import CaptchaWallForm
+from models import WallPost
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
-# indexsidan
+########################################################
+#
+#
+#                      Startsidan
+#
+#
+#########################################################
+
+
 def index(request):
 
     context_dict = {}
 
     return render_to_response("index.html", context_dict, context_instance = RequestContext(request))
 
-# foreningsinformation
+########################################################
+#
+#
+#                       Information
+#
+#
+#########################################################
+
+
 def stadgar(request):
 
     context_dict = {}
@@ -40,7 +59,16 @@ def lagindelning(request):
 
     return render_to_response("lagindelning.html", context_dict, context_instance = RequestContext(request))
 
-# fritidsaktiviteter
+
+########################################################
+#
+#
+#                       fritidsaktiviteter
+#
+#
+#########################################################
+
+
 def boule(request):
 
     context_dict = {}
@@ -65,7 +93,15 @@ def golf(request):
 
     return render_to_response("golf.html", context_dict, context_instance = RequestContext(request))
 
-# ovrigt
+########################################################
+#
+#
+#                       Ovrigt
+#
+#
+#########################################################
+
+
 def kontakt(request):
 
     context_dict = {}
@@ -107,3 +143,48 @@ def license_lightbox(request):
     context_dict = {}
 
     return render_to_response("license_lightbox.html", context_dict, context_instance = RequestContext(request))
+
+########################################################
+#
+#
+#                       Wall
+#
+#
+#########################################################
+
+def wall(request):
+    context = RequestContext(request)
+
+    form = CaptchaWallForm(request.POST or None)
+    wall_posts = WallPost.objects.all().order_by('-timestamp')
+    paginator = Paginator(wall_posts, 10)
+
+    wpost = request.GET.get('page')
+    try:
+        wall_posts = paginator.page(wpost)
+    except PageNotAnInteger:
+        wall_posts = paginator.page(1)
+    except EmptyPage:
+        wall_posts = paginator.page(paginator.num_pages)
+
+    context_dict = {'wall_posts': wall_posts, 'form': form}
+
+    if form.is_valid():
+        human = True
+        save_it = form.save(commit=False)
+        save_it.save()
+        return HttpResponseRedirect('thankyou')
+    else:
+        form = CaptchaWallForm()
+
+
+    return render_to_response("wall.html",
+                              context_dict,
+                              context)
+
+def thankyou(request):
+
+
+    return render_to_response("thankyou.html",
+                              locals(),
+                              context_instance = RequestContext(request))

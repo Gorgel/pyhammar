@@ -30,7 +30,14 @@ urlpatterns = patterns('',
     url(r'^license_bootstrap', 'stromshammar.views.license_bootstrap', name='license_bootstrap'),
     url(r'^license_lightbox', 'stromshammar.views.license_lightbox', name='license_lightbox'),
 
+    url(r'^wall', 'stromshammar.views.wall', name='wall'),
+    url(r'^thankyou', 'stromshammar.views.thankyou', name='thankyou'),
+
     url(r'^admin/', include(admin.site.urls)),
+)
+
+urlpatterns += patterns('',
+    url(r'^captcha/', include('captcha.urls')),
 )
 
 if settings.DEBUG:
