@@ -61,6 +61,8 @@
                             </li>
                             <li><a href="lagindelning">Lagindelning</a><!-- undermeny-knapp -->
                             </li>
+                            <li><a href="fragorosvar">Frågor & svar</a><!-- undermeny-knapp -->
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -80,7 +82,7 @@
                     </li>
                     <li><a href="historia"><span class="glyphicon glyphicon-time"></span>Historia</a><!-- meny-knapp -->
                     </li>
-                    <li><a href="fragorosvar"><span class="glyphicon glyphicon-question-sign"></span>Frågor & Svar</a><!-- meny-knapp -->
+                    <li><a href="wall"><span class="glyphicon glyphicon glyphicon-list"></span>Vägg</a><!-- meny-knapp -->
                     </li>
                 </ul>
             </div>
@@ -88,6 +90,57 @@
         </div>
         <!-- /.container -->
     </nav>
+    
+    <!-- kod för slidern -->
+    <div id="myCarousel" class="carousel slide">
+        
+        <!-- Indicators --><!-- bildknappar, ska läggas till om ny bild läggs till -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active"> <!-- active -> denna bild som visas när sidan laddar -->
+                <div class="fill" style="background-image:url('static/bilder/1280px/road1280px.jpg');"></div>
+                <!-- för caption till bilderna ta bort denna kommentar
+                    <div class="carousel-caption">
+                        <h1>Caption 3</h1>
+                    </div>  -->
+
+            <!-- lägg till bilder i slidern nedan -->
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('static/bilder/1280px/boat1280px.jpg');"></div>
+                </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('static/bilder/1280px/stranden1280px.jpg');"></div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('static/bilder/1280px/himmel1280px.jpg');"></div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('static/bilder/1280px/kanot1280px.jpg');"></div>
+            </div>
+            </div>
+            
+
+        <!-- Controls --><!-- väster och höger pilknapp -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </div>
+    
+    <!-- kod för länk till galleriet -->
+    <div id="linkContainer">
+    <span class="glyphicon glyphicon-picture"></span><a href="masonry"><b>Se mer bilder i galleriet</b></a>
+    </div>
     
     {% block content %}
     {% endblock %}
