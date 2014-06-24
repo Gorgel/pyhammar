@@ -1,3 +1,27 @@
+@font-face
+{
+font-family: oxygen;
+src: url(../fonts/Oxygen-Bold.ttf) format("opentype");
+}
+
+@font-face
+{
+font-family: SourceSansPro;
+src: url(../fonts/SourceSansPro-Light.ttf) format("opentype");
+}
+
+h1 {
+font-family: oxygen;   
+}
+
+h2 {
+font-family: oxygen;
+}
+
+h3 {
+font-family: oxygen;   
+}
+
 html, body {
 height:100%;
 background-color: #EEEEEE;

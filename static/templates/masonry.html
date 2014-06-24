@@ -23,27 +23,14 @@
                 <div class="col-xs-12 col-md-20">
                     <div class="newsFeed">
                         <div id="wrapper">
-                            <div id="list">  
+                            <div id="list">
+                                {% if images %}
+                                {% for image in images %}
                                 <div class="masonryItem">
-                                    <div class="masonryItem">
-                                    <a href="static/bilder/fullsize/himmel.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/himmel.jpg"></a>
+                                    <a href="media/galleribilder/{{ image.filename }}" data-lightbox="masonryImage" data-title="{{ image.caption }}"><img class="masonryImage" src="media/galleribilder/{{ image.filename }}"></a>
                                 </div>
-                                    <a href="static/bilder/fullsize/road.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/road.jpg"></a>
-                                </div>
-                                
-                                
-                                <div class="masonryItem">
-                                    <a href="static/bilder/fullsize/boat.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/boat.jpg"></a>
-                                </div>
-                                
-                                <div class="masonryItem">
-                                    <a href="static/bilder/fullsize/stranden.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/stranden.jpg"></a>
-                                </div>
-                                
-                                
-                                <div class="masonryItem">
-                                    <a href="static/bilder/fullsize/kanot2.jpg" data-lightbox="masonryImage" data-title="My"><img class="masonryImage" src="static/bilder/fullsize/kanot2.jpg"></a>
-                                </div>
+                                {% endfor %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>

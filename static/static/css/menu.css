@@ -26,6 +26,12 @@
 }
 }
 
+@font-face
+{
+font-family: Italianno;
+src: url(../fonts/Italianno-Regular-OTF.otf) format("opentype");
+}
+
 .navbar {
 max-width: 1280px;
 margin-left: auto;

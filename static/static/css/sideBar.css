@@ -13,13 +13,12 @@ background: white;
 .sideBarItem h2 {
 padding-bottom:  5px;
 margin-top: 0px;
-font-family:  'Nothing+You+Could+Do';
-font-size: 2em;
+font-family:  'oxygen';
+font-size: 1.5em;
 color: black;
 }
 
 .sideBarItem p {
-font-size:0.9em;
 padding-right:10px;
 }
 

@@ -21,18 +21,20 @@ overflow: auto;
 .newsItem h2 {
 margin:0px;
 margin-bottom: 5px;
-font-family: 'Nothing+You+Could+Do';
+font-family: 'oxygen';
 font-size: 2em;
 }
 
 .newsItem p {
 color:black;
+
 }
 
 #newsDate {
 margin:0px;
 padding-bottom: 10px;
 color:gray;
+font-family: 'oxygen';
 font-size:0.8em;
 }
 
@@ -61,7 +63,6 @@ text-decoration: none;
 }
 
 .submitItem {
-
 border-bottom-width: 1px;
 border-bottom-color: gray;
 margin-bottom:30px;
@@ -72,6 +73,7 @@ overflow: auto;
 .submitItem h2 {
 margin:0px;
 margin-bottom:20px;
+font-family: 'oxygen';
 font-size: 2em;
 }
 
@@ -109,7 +111,20 @@ padding:10px;
 }
 
 .captcha {
+    border: solid 1px #A9A9A9;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#SubmittButton {
+    width: 100%;
+}
+
+#newCaptchaButton {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

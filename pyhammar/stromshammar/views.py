@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response, RequestContext, HttpResponseRedirect
 from django.contrib import messages
 from .forms import CaptchaWallForm
-from models import WallPost, NewsPost
+from models import WallPost, NewsPost, GolfPost, GolfImage, FAQPost, GalleryImage, FiskeImage, FiskePost
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
@@ -18,9 +18,21 @@ def index(request):
 
     news_posts = NewsPost.objects.all().order_by('-date')
 
+    paginator = Paginator(news_posts, 6)
+
+    npost = request.GET.get('page')
+    try:
+        news_posts = paginator.page(npost)
+    except PageNotAnInteger:
+        news_posts = paginator.page(1)
+    except EmptyPage:
+        news_posts = paginator.page(paginator.num_pages)
+
     context_dict = {'news_posts' : news_posts}
 
     return render_to_response("index.html", context_dict, context_instance = RequestContext(request))
+
+
 
 ########################################################
 #
@@ -85,13 +97,41 @@ def fest(request):
 
 def fiske(request):
 
-    context_dict = {}
+    fiske_posts_list = FiskePost.objects.all().order_by('-pub_date')
+    fiske_posts = FiskePost.objects.all().order_by('-pub_date')
+    fiske_images = FiskeImage.objects.all()
+    paginator = Paginator(fiske_posts, 1)
+
+
+    fpost = request.GET.get('page')
+    try:
+        fiske_posts = paginator.page(fpost)
+    except PageNotAnInteger:
+        fiske_posts = paginator.page(1)
+    except EmptyPage:
+        fiske_posts = paginator.page(paginator.num_pages)
+
+    context_dict = { 'fiske_images' : fiske_images, 'fiske_posts' : fiske_posts, 'fiske_posts_list' : fiske_posts_list}
 
     return render_to_response("fiske.html", context_dict, context_instance = RequestContext(request))
 
 def golf(request):
 
-    context_dict = {}
+    golf_posts_list = GolfPost.objects.all().order_by('-pub_date')
+    golf_posts = GolfPost.objects.all().order_by('-pub_date')
+    golf_images = GolfImage.objects.all()
+    paginator = Paginator(golf_posts, 1)
+
+
+    gpost = request.GET.get('page')
+    try:
+        golf_posts = paginator.page(gpost)
+    except PageNotAnInteger:
+        golf_posts = paginator.page(1)
+    except EmptyPage:
+        golf_posts = paginator.page(paginator.num_pages)
+
+    context_dict = { 'golf_images' : golf_images, 'golf_posts' : golf_posts, 'golf_posts_list' : golf_posts_list}
 
     return render_to_response("golf.html", context_dict, context_instance = RequestContext(request))
 
@@ -118,15 +158,21 @@ def historia(request):
 
 def masonry(request):
 
-    context_dict = {}
+    images = GalleryImage.objects.all()
+
+    context_dict = {'images' : images }
 
     return render_to_response("masonry.html", context_dict, context_instance = RequestContext(request))
 
+
 def fragorosvar(request):
 
-    context_dict = {}
+    faqs = FAQPost.objects.all()
+
+    context_dict = {'faqs' : faqs }
 
     return render_to_response("fragorosvar.html", context_dict, context_instance = RequestContext(request))
+
 
 def forbattring(request):
 

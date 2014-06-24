@@ -22,6 +22,22 @@
                             {% endfor %}
                         {% endif %}
                         
+                        <div class="pageNav">
+                             <ul>
+                                 {% if news_posts.has_previous %}
+                                    <li><a href="?page={{ news_posts.previous_page_number }}"><span class="glyphicon glyphicon glyphicon-arrow-left"></span>Nyare</a></li>
+                                {% endif %}
+                                 
+                                
+                                 
+                                 <li>Sida {{ news_posts.number }} av {{ news_posts.paginator.num_pages }}</li>
+
+                                 {% if news_posts.has_next %}
+                                    <li><a href="?page={{ news_posts.next_page_number }}">Äldre <span class="glyphicon glyphicon glyphicon-arrow-right"></span></a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                        
                         <!-- footer-elementet längst ner i vänsterspalten -->
                         {% include "footer.html" %}
                         <!-- slut footer-elementet längst ner i vänsterspalten -->

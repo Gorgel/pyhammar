@@ -9,36 +9,16 @@
                     <!-- vänsterspalten med nyheter -->
                     <div class="newsFeed">
                         <!-- nyhetsartikel -->
+                        {% for post in faqs %}
                         <div class="newsItem">
-                                <h2>När är det städdag?</h2>
+                                <h2>{{ post.question }}</h2>
                                 <!-- nedanför finns ett ankare att länka till om man vill skapa en länk till
                                 till "senaste nytt" i högerfältet -->
-                                <a name="newsItem3"></a>
+                                <a name="item{{ post.id }}"></a>
                                 <!-- nedan lägger du in datumet för artikeln -->
-                                <p>Städdagen är den 17 maj... </p>
+                            {{ post.answer|safe }}
                         </div>
-                        <!-- nyhetsartikel slut -->
-                        
-                        <!-- nyhetsartikel -->
-                        <div class="newsItem">
-                                <h2>Hur mycket ska jag betala i årsavgift?</h2>
-                                <!-- nedanför finns ett ankare att länka till om man vill skapa en länk till
-                                till "senaste nytt" i högerfältet -->
-                                <a name="newsItem3"></a>
-                                <!-- nedan lägger du in datumet för artikeln -->
-                                <p>One billion dollar! </p>
-                        </div>
-                        <!-- nyhetsartikel slut -->
-                        
-                        <!-- nyhetsartikel -->
-                        <div class="newsItem">
-                                <h2>När blir det fika?</h2>
-                                <!-- nedanför finns ett ankare att länka till om man vill skapa en länk till
-                                till "senaste nytt" i högerfältet -->
-                                <a name="newsItem3"></a>
-                                <!-- nedan lägger du in datumet för artikeln -->
-                                <p>Alltid fika klockan 15:00</p>
-                        </div>
+                        {% endfor %}
                         <!-- nyhetsartikel slut -->
                         
                         <!-- footer-elementet längst ner i vänsterspalten -->
@@ -50,19 +30,18 @@
                 
                 <!-- kod för högerspalt -->
                 <div class="col-xs-12 col-md-4">
-                    <div class="sideBar">
-                        <!-- sidoartikel -->
-                        <div class="sideBarItem">
+                    <div class="sideBarItem">
                             <h2>Vanliga frågor</h2>
                             <!-- nedan länkas det till "artiklarnas ankare" -->
                             <ul>
-                            <li><p><a href="#newsItem3">När är det städdag?</a></p></li>
-                            <li><p><a href="#newsItem2">Hur mycket ska jag betala i årsavgift?</a></p></li>
-                            <li><p><a href="#newsItem1">När blir det fika?</a></p></li>
+                                {% if faqs %}
+                                    {% for post in faqs %}
+                                        <li><p><a href="#item{{ post.id }}">{{ post.question }}</a></p></li>
+                                   {% endfor %}
+                                {% endif %}
                             </ul>
                         </div>
                         <!-- sidoartikel slut -->
-                    </div>
                 </div>
             </div>
         </div>

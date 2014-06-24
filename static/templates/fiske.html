@@ -21,19 +21,37 @@
                             </ul>
                         </div>
 
+                        {% if fiske_posts %}
+                        {% for post in fiske_posts %}
                         <div class="newsItem">
-                            <h2>Fisketävlingen i Henaren 26/5-12</h2>
-                            <p>Vi var 8st båtar som fiskade och vi fick sammanlagt 22st gäddor.<p>
-                                <ul>
-                                    <li><p>1a platsen gick till Jonas Crona tomt 83 + Leffe Nordström tomt 32 på 6st gäddor</p></li>
-                                    <li><p>2a platsen gick till Allan och Tim tomt 110 på 5st gäddor</p></li>
-                                    <li><p>3a Dennis med familj tomt 41 på 3st gäddor </p></li>
-                                </ul>
-                            <p>Största gäddan fick Dennis båt den var på 4,6kg</p>
-                            <p><b>Tack till Kenneth Modig som hjälpte till att arrangera fisketävlingen.</b></p>
-                            <div class="masonryItem">
-                                    <a href="static/bilder/fisket%C3%A4vling2012.jpg" data-lightbox="masonryImage" data-title="Lagindelningskarta"><img class="masonryImage" src="static/bilder/fisket%C3%A4vling2012.jpg"></a>
+                            <h2>{{ post.headline }}</h2>
+                            {{ post.body_text }}
+                            
+                            {% if post.dokument %}
+                            <br>
+                            <br>
+                             <p>Se alla resultat <a href="media/{{ post.dokument }}">här</a>.</p>
+                            <br>
+                            {% endif %}
+                            
+                            <div id="wrapper">
+                            <div id="list">  
+                                <div class="masonryItem">
+                                    
+                                    {% for image in fiske_images %}
+                                        {% if image.fiske_post.headline == post.headline %}
+                                  <div class="masonryItem">
+                                    <a href="media/bilder/fiskebilder/{{ image.filename }}" data-lightbox="masonryImage" data-title="{{ image.caption }}"><img class="masonryImage" src="media/bilder/fiskebilder/{{ image.filename }}"></a>
                                 </div>
+                                        {% endif %}
+                                    {% endfor %}
+                        
+                                </div>
+                            </div>
+                            </div>
+                            
+                            {% endfor %}
+                        {% endif %}
                         </div>
                         
                         <!-- footer-elementet längst ner i vänsterspalten -->
@@ -46,6 +64,16 @@
                 <!-- kod för högerspalt -->
                 <div class="col-xs-12 col-md-4">
                     <div class="sideBar">
+                        
+                        <div class="sideBarItem">
+                            <h2>Artiklar</h2>
+                            {% for post in fiske_posts_list %}
+                            <ul>
+                               <li><a href="fiske?page={{ forloop.counter }}">{{ post.headline }}</a></li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+                        
                         <div class="sideBarItem">
                             <h2>Fiskekort:</h2>
                             <p><a href="static/dokument/fiskekort2011.pdf">fiskekort2011.pdf</a></p>

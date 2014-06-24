@@ -43,7 +43,7 @@ margin-bottom: 30px;
 }
 
 .masonryFeed {
-margin-top: 50px;
+margin-top: 0px;
 border-radius: 5px;
 box-shadow: 2px 2px 2px #888888;
 padding:30px;
@@ -58,7 +58,7 @@ margin-bottom: 2px;
 .masonryFeed h2 {
 margin:0px;
 margin-bottom: 5px;
-font-family: 'Nothing+You+Could+Do';
+font-family: 'oxygen';
 font-size: 3em;
 }
 
